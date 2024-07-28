@@ -4,7 +4,7 @@
 
 > 第五週 作業
 
-### 🏠 [Homepage](https://ttppoo121440.github.io/week5)
+### 🏠 [Homepage](https://ttppoo121440.github.io/week5/)
 
 ## 安裝
 

@@ -18,8 +18,7 @@ function moveOutputPlugin() {
       for (const fileName in bundle) {
         if (fileName.startsWith("src/pages/")) {
           const newFileName = fileName.slice("src/pages/".length);
-          bundle[fileName].fileName =
-            newFileName === "index.html" ? newFileName : `pages/${newFileName}`;
+          bundle[fileName].fileName = newFileName;
         }
       }
     },
@@ -34,7 +33,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     build: {
       rollupOptions: {
         input: {
-          main: resolve(__dirname, "index.html"),
+          main: resolve(__dirname, "src/pages/index.html"),
           ...Object.fromEntries(
             globSync("src/pages/**/*.html").map((file) => [
               path.relative(
@@ -47,6 +46,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         },
       },
       outDir: "dist",
+    },
+    server: {
+      port: 3000,
+      open: "/src/pages/index.html",
+      fs: {
+        allow: [resolve(__dirname, "src"), resolve(__dirname, "src/pages")],
+      },
     },
     plugins: [
       tsconfigPaths(),
