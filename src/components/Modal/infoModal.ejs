@@ -1,0 +1,75 @@
+<div
+  id="infoModal"
+  class="fixed inset-0 flex hidden items-center justify-center bg-gray-800 bg-opacity-50"
+>
+  <div class="relative mx-auto w-[480px] rounded-lg bg-white p-8 shadow-lg">
+    <div class="flex">
+      <img
+        src="https://images.unsplash.com/photo-1522069394066-326005dc26b2?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1350&q=80"
+        alt=""
+        class="h-[141px] w-[141px] object-cover"
+      />
+      <div class="ml-6 flex w-full flex-col">
+        <div class="mb-2 flex">
+          <span>#1</span>
+          <button class="close ml-auto text-gray-400 hover:text-gray-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <span>admin</span>
+        <h2 class="text-2xl">Emir Wicks</h2>
+        <a href="mailto:emir.wicks@mail.com" class="text-secondary text-sm"
+          >emir.wicks&#64;mail.com</a
+        >
+        <div class="flex pt-1">
+          <span class="mr-auto block bg-light-bg px-2 py-1 text-sm text-text"
+            >Verified</span
+          >
+          <a href="#">
+            <span
+              id="arrow-downward"
+              class="material-symbols-outlined ml-2 text-base text-primary"
+            >
+              keyboard_arrow_down
+            </span></a
+          >
+          <a href="#">
+            <span
+              id="arrow-upward"
+              class="material-symbols-outlined ml-2 hidden text-base text-primary"
+            >
+              keyboard_arrow_up
+            </span></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="flex hidden justify-end pt-8" id="arrow">
+      <button
+        type="button"
+        class="mr-4 flex h-[35px] w-[146px] items-center justify-center border border-danger font-bold text-danger"
+      >
+        Deactivate
+      </button>
+      <button
+        type="button"
+        class="open-edit-modal flex h-[35px] w-[92px] items-center justify-center bg-primary font-bold text-white"
+      >
+        Edit
+      </button>
+    </div>
+  </div>
+</div>

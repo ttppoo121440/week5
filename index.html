@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>week5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body class="leading-normal">
+    <%- include('./src/layout/aside.ejs') %>
+
+    <div class="container ml-[20.375rem]">
+      <header class="flex py-8">
+        <h2 class="mr-[50px] text-2xl">Assignment</h2>
+        <select
+          id="select"
+          aria-label="select"
+          class="pr-2 font-medium text-text"
+        >
+          <option>All Courses</option>
+        </select>
+        <div class="ml-auto flex items-center">
+          <a href="#">
+            <span class="material-symbols-outlined"> search </span></a
+          >
+          <a href="#">
+            <span class="material-icons ml-7">notifications_active</span></a
+          >
+        </div>
+      </header>
+      <div class="flex">
+        <select
+          id="all"
+          aria-label="all"
+          class="custom-select mr-auto pr-2 font-bold text-text"
+        >
+          <option>All (4)</option>
+        </select>
+        <div>
+          <span class="text-xs text-secondary">2 comments</span>
+        </div>
+      </div>
+      <div class="flex">
+        <%- include('./src/components/message.ejs') %>
+        <div class="relative w-[36.5rem]">
+          <%- include('./src/components/article.ejs') %>
+          <div
+            class="flex items-center border-l border-r border-border-line pl-4 pr-8"
+          >
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/andychen.jpeg?raw=true"
+              alt=""
+              class="mr-2 h-10 w-10 rounded-full"
+            />
+            <div>
+              <p class="leading-[19px] text-text">Andy Chen (You)</p>
+              <time datetime="13:24" class="text-xs text-secondary"
+                >13:24 AM (1 hours ago)</time
+              >
+            </div>
+            <div class="ml-auto">
+              <a href="#"
+                ><span class="material-symbols-outlined"> star </span></a
+              >
+              <a href="#"> <span class="material-icons ml-6"> edit </span></a>
+            </div>
+          </div>
+          <article
+            class="rounded-b-sm border-b border-l border-r border-border-line pb-[22px] pl-[64px] pr-8 pt-4"
+          >
+            <p class="text-sm">
+              Hi David, by default, an image is rendered inline, like a letter
+              so it sits on the same line that a, b, c and d sit on. There is
+              space below that line for the descenders you find on letters like
+              g, j, p and q.
+              <br />
+              <br />
+              You can:
+              <br />
+              <br />
+              　• adjust the
+              <span class="bg-light-bg text-primary">vertical-align</span> of
+              the image to position it elsewhere<br />
+              (e.g. the
+              <span class="bg-light-bg text-primary">middle</span> ) or <br />
+              　• change the
+              <span class="bg-light-bg text-primary">display</span> so it isn’t
+              inline.
+            </p>
+          </article>
+          <div class="flex pt-4">
+            <div class="mr-auto">
+              <a href="#"
+                ><span class="material-symbols-outlined mr-7">
+                  chevron_left
+                </span></a
+              >
+              <a href="#">
+                <span class="material-symbols-outlined">
+                  chevron_right
+                </span></a
+              >
+            </div>
+            <div class="flex">
+              <a
+                href="#"
+                class="mr-4 flex h-[35px] w-[157px] items-center justify-center border border-primary text-primary"
+                >Mark as read</a
+              >
+              <a
+                href="<%= base %>assignment-post.html"
+                class="flex h-[35px] w-[105px] items-center justify-center bg-primary text-white"
+                >Reply</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
