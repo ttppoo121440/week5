@@ -8,7 +8,19 @@ module.exports = {
     "./src/**/*.tsx",
     "./src/**/*.ejs",
   ],
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".scrollbar-hidden": {
+          msOverflowStyle: "none",
+          scrollbarWidth: "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    },
+  ],
   theme: {
     fontFamily: {
       sans: ["Roboto", "Noto Sans TC", "sans-serif"],
