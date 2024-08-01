@@ -8,6 +8,10 @@
     max-width: 924px;
   }
 
+  .btn {
+    @apply flex items-center justify-center border border-primary font-bold text-primary hover:bg-primary hover:text-white;
+  }
+
   .aside-item {
     @apply flex items-center border-l-4 border-l-transparent px-8 leading-8 text-text hover:border-l-4 hover:border-l-primary;
   }
