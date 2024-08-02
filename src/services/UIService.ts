@@ -10,6 +10,7 @@ export class UIService {
     this.subject = new UISubject();
     this.observer = new UIObserver();
     this.subject.attach(this.observer);
+    this.subject.setState("arrowDownward", true);
     this.setupEventListeners();
   }
 
